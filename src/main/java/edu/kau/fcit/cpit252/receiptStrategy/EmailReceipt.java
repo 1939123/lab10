@@ -5,9 +5,15 @@ import edu.kau.fcit.cpit252.utils.EmailTemplate;
 import edu.kau.fcit.cpit252.utils.SendEmail;
 import java.util.List;
 
-public class EmailReceipt{
+public class EmailReceipt extends Receipt{
     private String subject;
     private String recipient;
+
+    public EmailReceipt(String subject, String recipient, List<Product> products) {
+        super(products);
+        this.subject = subject;
+        this.recipient = recipient;
+    }
 
 
     @Override

@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-public class CreditCardPayment {
+public class CreditCardPayment implements Payment{
     private String transactionId;
     private String name;
     private String cardNumber;
@@ -32,5 +32,10 @@ public class CreditCardPayment {
                 "\n\tDate: " + simpleDateFormat.format(this.date) +
                 "\n\tCard Number: ****" +
                 this.cardNumber.substring(this.cardNumber.length() - 5, this.cardNumber.length() - 1);
+    }
+
+    @Override
+    public void pay(double amount) {
+        System.out.println(amount + " was processed on a credit card.");
     }
 }

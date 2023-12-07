@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-public class PayPalPayment {
+public class PayPalPayment implements Payment{
     private String transactionId;
     private String email;
     public String merchant;
@@ -26,6 +26,10 @@ public class PayPalPayment {
                 "\n\tDate: " + simpleDateFormat.format(this.date) +
                 "\n\tMerchant: " + this.merchant +
                 "\n\t" + "Email: " + this.email + "\n");
+    }
+    @Override
+    public void pay(double amount) {
+        System.out.println(amount + " was processed via Paypal.");
     }
 
 

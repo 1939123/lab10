@@ -10,10 +10,16 @@ import java.io.IOException;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class PdfReceipt{
+public class PdfReceipt extends Receipt{
 
     private String subject;
     private String path;
+
+    public PdfReceipt(String subject, String path ,List<Product> products) {
+        super(products);
+        this.subject = subject;
+        this.path = path;
+    }
 
 
     @Override

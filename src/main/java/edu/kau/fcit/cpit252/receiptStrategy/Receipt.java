@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-public class Receipt {
+public abstract class Receipt {
     private String id;
     private List<Product> products;
     private Date issueDate;
@@ -29,5 +29,5 @@ public class Receipt {
         return issueDate;
     }
 
-    public void generate();
+    public abstract void generate();
 }

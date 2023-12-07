@@ -5,9 +5,14 @@ import edu.kau.fcit.cpit252.shopping.Product;
 
 import java.util.List;
 
-public class PrintReceipt {
+public class PrintReceipt extends Receipt {
 
     private String subject;
+
+    public PrintReceipt(String subject, List<Product> products) {
+        super(products);
+        this.subject = subject;
+    }
 
 
     @Override
