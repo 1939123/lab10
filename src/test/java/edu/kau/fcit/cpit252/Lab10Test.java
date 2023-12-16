@@ -24,7 +24,7 @@ public class Lab10Test
     @Test
     public void testReceiptAbstractClass() {
         assertTrue(Modifier.isAbstract(Receipt.class.getModifiers()));
-        assertEquals(4, Receipt.class.getDeclaredMethods().length);
+        assertEquals(5, Receipt.class.getDeclaredMethods().length);
         Method[] methods = Receipt.class.getDeclaredMethods();
         int abstractMethodCount = 0;
         for (Method m : methods) {
